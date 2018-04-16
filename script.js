@@ -30,14 +30,26 @@ function displayRandomName() {
 function checkName() {
     if ($(this).attr('value') == currentName) {
         $('body').css('background-color', 'limegreen');
+        $('#shelia').css('display', 'inline');
         window.setTimeout(whiteBackground, 2000);
+        window.setTimeout(removeShelia, 2000);
         displayRandomName();
     }
     else {
         // alert('Go think about what you have done. Repent, loser.');
         $('body').css('background-color', 'magenta');
-        window.setTimeout(whiteBackground, 2000);
+        $('#loserville').css('display', 'inline');
+        window.setTimeout(whiteBackground, 2900);
+        window.setTimeout(removeLoserville, 2900);
     }
+}
+
+function removeShelia() {
+    $('#shelia').css('display', 'none');
+}
+
+function removeLoserville () {
+    $('#loserville').css('display', 'none');
 }
 
 function whiteBackground() {
