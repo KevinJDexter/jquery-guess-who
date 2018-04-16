@@ -29,12 +29,19 @@ function displayRandomName() {
 
 function checkName() {
     if ($(this).attr('value') == currentName) {
-        alert('You are the smartest!\nLet\'s play again! (b^_^)b');
+        $('body').css('background-color', 'limegreen');
+        window.setTimeout(whiteBackground, 2000);
         displayRandomName();
     }
     else {
-        console.log('nay');
+        // alert('Go think about what you have done. Repent, loser.');
+        $('body').css('background-color', 'magenta');
+        window.setTimeout(whiteBackground, 2000);
     }
+}
+
+function whiteBackground() {
+    $('body').css('background-color', 'white');
 }
 
 function randomNumber(min, max){
